@@ -1,0 +1,3645 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Air Terjun Nglirip — Jejak Alam & Warisan Tuban</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #F8F5EC;
+    color: #3F4541;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection {
+    background: #6FA9A0;
+    color: white;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --cream: #F8F5EC;
+    --cream-dark: #F1EDE2;
+    --green-dark: #263F36;
+    --green: #315A50;
+    --green-soft: #6FA9A0;
+    --green-light: #E7EEE8;
+    --brown: #806B55;
+    --text: #3F4541;
+    --white: #FFFDF7;
+}
+
+
+/* =========================================================
+   GRAIN EFFECT
+========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: .035;
+
+    background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 50px);
+    max-width: 1400px;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    background: rgba(248,245,236,.78);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 100px;
+
+    box-shadow:
+        0 15px 50px rgba(38,63,54,.10);
+
+    transition: .4s;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* LOGO */
+.brand-logos {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* LOGO SMP DIHAPUS SESUAI PERMINTAAN */
+/* Sekarang hanya logo Kabupaten Tuban */
+
+.tuban-logo {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: white;
+
+    padding: 4px;
+}
+
+.brand-text strong {
+    display: block;
+
+    color: var(--green-dark);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.brand-text span {
+    font-size: 10px;
+
+    color: #718078;
+
+    letter-spacing: 1.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-links a {
+    position: relative;
+
+    font-size: 12px;
+
+    color: var(--green-dark);
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--green);
+
+    transition: .4s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    padding: 12px 19px;
+
+    background: var(--green-dark);
+
+    color: white !important;
+
+    border-radius: 100px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: white;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(31,57,49,.28) 0%,
+            rgba(31,57,49,.10) 35%,
+            rgba(31,57,49,.86) 100%
+        ),
+        url("https://www.gotravelly.com/assets/img/review/gallery/645/1a96041c48fd096d5f8b53b233660455.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.04);
+
+    animation: heroZoom 12s ease-out forwards;
+}
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1.10);
+    }
+
+    to {
+        transform: scale(1.04);
+    }
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 150px 60px 70px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 50px;
+
+    align-items: end;
+}
+
+.hero-small {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #A9C9BF;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 9vw, 145px);
+
+    line-height: .78;
+
+    font-weight: 600;
+
+    letter-spacing: -5px;
+
+    max-width: 900px;
+}
+
+.hero h1 em {
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #E7EEE8;
+}
+
+.hero-actions {
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 14px 21px;
+
+    border-radius: 100px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .4s;
+}
+
+.button-primary {
+    background: #F8F5EC;
+
+    color: var(--green-dark);
+}
+
+.button-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2);
+}
+
+.button-outline {
+    border: 1px solid rgba(255,255,255,.45);
+
+    color: white;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(10px);
+}
+
+.button-outline:hover {
+    background: rgba(255,255,255,.18);
+}
+
+.hero-card {
+    width: 220px;
+
+    padding: 24px;
+
+    border:
+        1px solid rgba(255,255,255,.3);
+
+    background:
+        rgba(255,255,255,.10);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 25px;
+}
+
+.hero-card small {
+    color: #A9C9BF;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.hero-card h3 {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    margin: 10px 0 3px;
+}
+
+.hero-card p {
+    font-size: 12px;
+
+    color: #DCE7E1;
+
+    line-height: 1.6;
+}
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #E7EEE8;
+}
+
+.scroll-line {
+    width: 1px;
+
+    height: 45px;
+
+    background:
+        rgba(255,255,255,.55);
+
+    animation:
+        scrollLine 2s infinite;
+}
+
+@keyframes scrollLine {
+
+    0%,100% {
+        transform: scaleY(.4);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee {
+    overflow: hidden;
+
+    background: var(--green-dark);
+
+    color: #D8E2DC;
+
+    padding: 15px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.1);
+}
+
+.marquee-track {
+    display: flex;
+
+    width: max-content;
+
+    animation:
+        marquee 25s linear infinite;
+}
+
+.marquee span {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    margin: 0 35px;
+
+    white-space: nowrap;
+}
+
+.marquee span::before {
+    content: "✦";
+
+    margin-right: 35px;
+
+    color: #A9C9BF;
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   GLOBAL SECTION
+========================================================= */
+
+section {
+    padding: 120px 7vw;
+
+    position: relative;
+}
+
+.section-container {
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+.section-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--green-soft);
+
+    margin-bottom: 20px;
+}
+
+.section-label::before {
+    content: "";
+
+    width: 35px;
+
+    height: 1px;
+
+    background: currentColor;
+}
+
+.section-title {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    color: var(--green-dark);
+
+    font-size:
+        clamp(45px, 5vw, 70px);
+
+    line-height: .95;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+}
+
+.section-title em {
+    font-weight: 400;
+}
+
+.body-text {
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: var(--cream);
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        .85fr 1.15fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+
+    height: 600px;
+
+    overflow: hidden;
+
+    border-radius:
+        220px 220px 18px 18px;
+}
+
+.about-image img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 1s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-image::after {
+    content: "NGLIRIP";
+
+    position: absolute;
+
+    bottom: 28px;
+    left: 28px;
+
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 70px;
+
+    color: white;
+
+    opacity: .85;
+}
+
+.about-copy {
+    max-width: 650px;
+}
+
+.about-copy .body-text {
+    margin-top: 30px;
+}
+
+.quote {
+    margin-top: 38px;
+
+    padding-left: 22px;
+
+    border-left:
+        1px solid var(--green-soft);
+
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 26px;
+
+    line-height: 1.3;
+
+    color: var(--green);
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   PESONA
+========================================================= */
+
+.pesona {
+    background: var(--green-light);
+}
+
+.pesona-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 60px;
+}
+
+.pesona-heading p {
+    max-width: 390px;
+}
+
+.attraction-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+}
+
+.attraction-card {
+    position: relative;
+
+    height: 510px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.attraction-card img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 1s;
+}
+
+.attraction-card:hover img {
+    transform: scale(1.08);
+}
+
+.attraction-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 30%,
+            rgba(20,39,33,.9) 100%
+        );
+}
+
+.card-number {
+    position: absolute;
+
+    top: 20px;
+    left: 22px;
+
+    z-index: 2;
+
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    color: white;
+}
+
+.attraction-content {
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+
+    z-index: 2;
+
+    color: white;
+}
+
+.attraction-content h3 {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    margin-bottom: 12px;
+}
+
+.attraction-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #E7EEE8;
+}
+
+
+/* =========================================================
+   ACTIVITIES
+========================================================= */
+
+.activities {
+    background: var(--cream);
+}
+
+.activities-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 15px;
+
+    margin-top: 55px;
+}
+
+.activity {
+    border-top:
+        1px solid #CBD4CE;
+
+    padding-top: 25px;
+
+    transition: .4s;
+}
+
+.activity:hover {
+    transform: translateY(-7px);
+}
+
+/* IKON AKTIVITAS BARU */
+.activity-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background: var(--green-light);
+
+    border: 1px solid #C8D6CF;
+
+    color: var(--green-dark);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 8px 20px rgba(38,63,54,.08);
+}
+
+.activity-icon.camera {
+    font-size: 25px;
+}
+
+.activity-icon.walk {
+    font-size: 25px;
+}
+
+.activity-icon.explore {
+    font-size: 25px;
+}
+
+.activity-icon.story {
+    font-size: 25px;
+}
+
+.activity h3 {
+    color: var(--green-dark);
+
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 29px;
+
+    margin-bottom: 10px;
+}
+
+.activity p {
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #718078;
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.history {
+    background: var(--cream-dark);
+}
+
+.history-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.history-image {
+    position: relative;
+}
+
+.history-image img {
+    height: 590px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.history-stamp {
+    position: absolute;
+
+    bottom: -25px;
+    right: -25px;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    line-height: 1.1;
+
+    transform: rotate(-10deg);
+}
+
+.history-copy p {
+    margin-top: 30px;
+}
+
+.legend-box {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background:
+        rgba(255,255,255,.5);
+
+    border:
+        1px solid #D8D0C0;
+
+    border-radius: 12px;
+}
+
+.legend-box small {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--brown);
+}
+
+.legend-box p {
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-section {
+    background: var(--green-dark);
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.video-section .section-title {
+    color: white;
+}
+
+.video-layout {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.video-text .section-label {
+    color: #A9C9BF;
+}
+
+.video-text p {
+    margin-top: 28px;
+
+    color: #D8E2DC;
+}
+
+.video-card {
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.video-card img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 1s;
+}
+
+.video-card:hover img {
+    transform: scale(1.06);
+}
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(31,57,49,.25);
+}
+
+.play-button {
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    background: #F8F5EC;
+
+    color: var(--green-dark);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    transition: .4s;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.video-caption {
+    position: absolute;
+
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: white;
+}
+
+.video-caption span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CULINARY / UMKM
+========================================================= */
+
+.culinary {
+    background: var(--cream);
+}
+
+.culinary-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 55px;
+}
+
+.culinary-heading p {
+    max-width: 380px;
+}
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr .8fr .8fr;
+
+    gap: 16px;
+}
+
+.food-card {
+    position: relative;
+
+    height: 460px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #DCE5DF;
+}
+
+.food-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 1s;
+}
+
+.food-card:hover img {
+    transform: scale(1.07);
+}
+
+.food-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(20,39,33,.88)
+        );
+}
+
+.food-info {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+
+    color: white;
+}
+
+.food-info small {
+    color: #A9C9BF;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 9px;
+}
+
+.food-info h3 {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    margin-top: 5px;
+}
+
+.food-info a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    font-size: 11px;
+
+    text-decoration: underline;
+}
+
+/* TEKS RASA LOKAL DI BAWAH FOTO MAKANAN */
+.culinary-note {
+    margin-top: 40px;
+
+    padding: 28px 32px;
+
+    border-left: 2px solid var(--green-soft);
+
+    background: var(--green-light);
+
+    border-radius: 0 12px 12px 0;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.info {
+    background: var(--green-light);
+}
+
+.info-layout {
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 80px;
+}
+
+.info-list {
+    margin-top: 45px;
+}
+
+.info-row {
+    display: grid;
+
+    grid-template-columns:
+        150px 1fr;
+
+    padding: 22px 0;
+
+    border-bottom:
+        1px solid #C8D3CC;
+}
+
+.info-row strong {
+    font-size: 12px;
+
+    color: var(--green);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.info-row span {
+    font-size: 14px;
+}
+
+.tip-box {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(38,63,54,.72),
+            rgba(38,63,54,.82)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Air_Terjun_Nglirip.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 15px;
+
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    backdrop-filter: blur(3px);
+}
+
+.tip-box::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(38,63,54,.25);
+
+    backdrop-filter: blur(5px);
+
+    z-index: 0;
+}
+
+.tip-box > * {
+    position: relative;
+    z-index: 1;
+}
+
+.tip-box small {
+    color: #A9C9BF;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+}
+
+.tip-box h3 {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 45px;
+
+    line-height: 1;
+
+    margin: 25px 0;
+}
+
+.tip-box p {
+    color: #D8E2DC;
+
+    line-height: 1.8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery {
+    background: var(--cream);
+}
+
+.gallery-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 55px;
+}
+
+.gallery-head p {
+    max-width: 390px;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(12,1fr);
+
+    grid-auto-rows: 100px;
+
+    gap: 13px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .8s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item::after {
+    content: "VIEW ↗";
+
+    position: absolute;
+
+    bottom: 15px;
+    right: 15px;
+
+    background:
+        rgba(248,245,236,.88);
+
+    color: var(--green-dark);
+
+    padding: 8px 11px;
+
+    border-radius: 100px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    transition: .4s;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+/* GALERI DIRAPIKAN AGAR TIDAK ADA FOTO SENDIRIAN */
+.gallery-item:nth-child(1) {
+    grid-column: span 5;
+    grid-row: span 4;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 4;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: span 6;
+    grid-row: span 3;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: span 6;
+    grid-row: span 3;
+}
+
+
+/* TEKS DI BAWAH GALERI */
+.gallery-note {
+    margin-top: 45px;
+
+    padding: 30px 35px;
+
+    border-left:
+        2px solid var(--green-soft);
+
+    background:
+        var(--green-light);
+
+    border-radius: 0 12px 12px 0;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location {
+    background: var(--cream-dark);
+}
+
+.location-grid {
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: stretch;
+}
+
+.location-copy {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.location-copy p {
+    margin-top: 25px;
+}
+
+.location-address {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-left:
+        2px solid var(--brown);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.map {
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(38,63,54,.13);
+}
+
+.map iframe {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 500px;
+
+    border: 0;
+
+    filter:
+        grayscale(.35)
+        saturate(.7);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    background: var(--green);
+
+    text-align: center;
+
+    color: white;
+
+    padding: 140px 20px;
+
+    overflow: hidden;
+}
+
+.cta::before {
+    content: "NGLIRIP";
+
+    position: absolute;
+
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 24vw;
+
+    white-space: nowrap;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    color:
+        rgba(255,255,255,.035);
+}
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.cta-small {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #A9C9BF;
+
+    text-transform: uppercase;
+}
+
+.cta h2 {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size:
+        clamp(55px,8vw,105px);
+
+    line-height: .9;
+
+    margin: 25px auto;
+
+    max-width: 900px;
+}
+
+.cta p {
+    max-width: 550px;
+
+    margin: auto;
+
+    color: #D8E2DC;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+.cta .button {
+    margin-top: 30px;
+
+    background: var(--cream);
+
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: var(--green-dark);
+
+    color: white;
+
+    padding:
+        60px 7vw 25px;
+}
+
+.footer-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+footer h3 {
+    font-family:
+        "Cormorant Garamond", serif;
+
+    font-size: 34px;
+}
+
+footer p {
+    color: #D8E2DC;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    max-width: 320px;
+
+    margin-top: 15px;
+}
+
+footer h4 {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #A9C9BF;
+
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 10px;
+
+    font-size: 12px;
+
+    color: #D8E2DC;
+}
+
+footer a:hover {
+    color: #A9C9BF;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+
+    margin:
+        60px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    color: #9CAFA6;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA POP-UP / FLOATING BUTTON
+========================================================= */
+
+.social-float {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 9998;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.social-float-button {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.20);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    text-decoration: none;
+}
+
+.social-float-button:hover {
+    transform: translateY(-4px) scale(1.06);
+
+    box-shadow:
+        0 15px 32px rgba(0,0,0,.28);
+}
+
+.social-float-button svg {
+    width: 27px;
+    height: 27px;
+
+    fill: currentColor;
+}
+
+.social-float-whatsapp {
+    background: #25D366;
+}
+
+.social-float-instagram {
+    background:
+        linear-gradient(
+            135deg,
+            #833AB4,
+            #E1306C,
+            #F77737
+        );
+}
+
+.social-float-label {
+    position: absolute;
+
+    right: 63px;
+
+    padding: 7px 11px;
+
+    background: rgba(38,63,54,.92);
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transform: translateX(8px);
+
+    pointer-events: none;
+
+    transition: .3s;
+}
+
+.social-float-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.social-float-item:hover .social-float-label {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width:1000px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        padding:
+            150px 30px 70px;
+    }
+
+    .hero-card {
+        display: none;
+    }
+
+    .about-grid,
+    .history-grid,
+    .video-layout,
+    .info-layout,
+    .location-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .food-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .food-card:first-child {
+        grid-column: span 2;
+    }
+
+    .gallery-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        grid-auto-rows: 220px;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width:650px) {
+
+    section {
+        padding:
+            85px 22px;
+    }
+
+    .navbar {
+        width:
+            calc(100% - 25px);
+
+        top: 10px;
+    }
+
+    .brand-text span {
+        display: none;
+    }
+
+    .brand-logos {
+        gap: 4px;
+    }
+
+    .tuban-logo {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 0;
+        padding: 0;
+        background: transparent;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .about-image,
+    .history-image img,
+    .video-card {
+        height: 420px;
+    }
+
+    .pesona-heading,
+    .culinary-heading,
+    .gallery-head {
+        display: block;
+    }
+
+    .pesona-heading p,
+    .culinary-heading p,
+    .gallery-head p {
+        margin-top: 20px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card:first-child {
+        grid-column: auto;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 260px;
+    }
+
+    .gallery-item:first-child {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+    .tip-box {
+        padding: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .social-button {
+        width: min(100%, 280px);
+    }
+
+    .gallery-note {
+        padding: 25px;
+    }
+
+    .culinary-note {
+        padding: 25px;
+        font-size: 13px;
+    }
+
+    .social-float {
+        right: 14px;
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .social-float-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .social-float-button svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .social-float-label {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   VISITOR GUIDE TAMBAHAN
+========================================================= */
+
+.visitor-note {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background:
+        rgba(255,255,255,.55);
+
+    border:
+        1px solid #C8D3CC;
+
+    border-radius: 12px;
+}
+
+.visitor-note small {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--green);
+}
+
+.visitor-note p {
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar">
+
+    <a href="#home" class="brand">
+
+        <!-- LOGO SMP DIHAPUS -->
+        <!-- HANYA LOGO KABUPATEN TUBAN -->
+
+        <div class="brand-logos">
+
+            <img
+                class="tuban-logo"
+                src="https://iconlogovector.com/uploads/images/2023/06/lg-a1b9922e02d0fd2f3fa2ef31d2f8a98545.jpg"
+                alt="Logo Kabupaten Tuban"
+            >
+
+        </div>
+
+        <div class="brand-text">
+
+            <strong>NGLIRIP</strong>
+
+            <span>
+                TUBAN • EAST JAVA
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#story">
+            Tentang
+        </a>
+
+        <a href="#pesona">
+            Pesona
+        </a>
+
+        <a href="#aktivitas">
+            Aktivitas
+        </a>
+
+        <a href="#kuliner">
+            Kuliner
+        </a>
+
+        <a href="#gallery">
+            Galeri
+        </a>
+
+        <a href="#lokasi">
+            Lokasi
+        </a>
+
+        <a
+            href="#video"
+            class="nav-button"
+        >
+            Explore ↗
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <div>
+
+            <div class="hero-small">
+                Nature • Heritage • Tuban
+            </div>
+
+            <h1>
+                Air Terjun<br>
+                <em>Nglirip</em>
+            </h1>
+
+            <p class="hero-description">
+
+                Satu aliran air, sejuta cerita.
+                Di balik gemuruh Air Terjun Nglirip,
+                tersimpan pesona alam dan jejak warisan
+                yang terus mengalir.
+
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="#story"
+                    class="button button-primary"
+                >
+                    Jelajahi Nglirip ↓
+                </a>
+
+                <a
+                    href="#gallery"
+                    class="button button-outline"
+                >
+                    Lihat Galeri ↗
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <small>
+                Location
+            </small>
+
+            <h3>
+                Singgahan
+            </h3>
+
+            <p>
+                Kabupaten Tuban<br>
+                Jawa Timur, Indonesia
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        Scroll
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MARQUEE
+========================================================= -->
+
+<div class="marquee">
+
+    <div class="marquee-track">
+
+        <span>Nature</span>
+        <span>Heritage</span>
+        <span>Waterfall</span>
+        <span>Tuban</span>
+        <span>Local Story</span>
+
+        <span>Nature</span>
+        <span>Heritage</span>
+        <span>Waterfall</span>
+        <span>Tuban</span>
+        <span>Local Story</span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TENTANG
+========================================================= -->
+
+<section class="about" id="story">
+
+    <div class="section-container about-grid">
+
+        <div class="about-image reveal">
+
+            <img
+                src="https://wisatamilenial.com/wp-content/uploads/2021/06/Air-Terjun-Nglirip-di-Lihat-Dari-Atas-Image-From-%40soqib_anwar25.jpg"
+                alt="Air Terjun Nglirip dari atas"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="about-copy reveal">
+
+            <div class="section-label">
+                01 — Tentang Nglirip
+            </div>
+
+            <h2 class="section-title">
+                Alam yang<br>
+                <em>terus mengalir.</em>
+            </h2>
+
+            <p class="body-text">
+
+                Air Terjun Nglirip merupakan salah satu wisata
+                alam yang berada di Kecamatan Singgahan,
+                Kabupaten Tuban, Jawa Timur.
+
+                Wisata ini menawarkan pemandangan air terjun
+                yang mengalir dari tebing dengan dikelilingi
+                pepohonan rindang dan suasana alam yang sejuk.
+
+                <br><br>
+
+                Salah satu daya tarik utamanya adalah warna air
+                yang dapat terlihat hijau tosca dan jernih ketika
+                musim kemarau, sehingga menciptakan pemandangan
+                yang indah dan cocok untuk menikmati suasana alam.
+
+                Keunikan Nglirip tidak hanya terletak pada
+                keindahan air terjunnya, tetapi juga pada cerita
+                dan legenda Putri Nglirip yang berkembang di
+                tengah masyarakat sekitar.
+
+                <br><br>
+
+                Pengunjung dapat menikmati pemandangan,
+                mengambil foto, bersantai, serta merasakan
+                kesejukan alam yang jauh dari suasana perkotaan.
+
+            </p>
+
+            <div class="quote">
+
+                “Keindahan Nglirip bukan hanya tentang air,
+                tetapi juga tentang cerita yang diwariskan.”
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PESONA
+========================================================= -->
+
+<section class="pesona" id="pesona">
+
+    <div class="section-container">
+
+        <div class="pesona-heading reveal">
+
+            <div>
+
+                <div class="section-label">
+                    02 — Pesona
+                </div>
+
+                <h2 class="section-title">
+                    Tiga sisi<br>
+                    <em>Nglirip.</em>
+                </h2>
+
+            </div>
+
+            <p class="body-text">
+
+                Dari air yang berubah warna hingga cerita rakyat
+                yang berkembang di tengah masyarakat, Nglirip
+                memiliki daya tarik yang membuat setiap kunjungan
+                terasa berbeda.
+
+            </p>
+
+        </div>
+
+        <div class="attraction-grid">
+
+
+            <!-- CARD 1 -->
+
+            <article class="attraction-card reveal">
+
+                <img
+                    src="https://javatempletrip.com/wp-content/uploads/2023/09/Air-Terjun-Nglirip.jpg"
+                    alt="Air Terjun Nglirip"
+                    loading="lazy"
+                >
+
+                <span class="card-number">
+                    01
+                </span>
+
+                <div class="attraction-content">
+
+                    <h3>
+                        Air<br>
+                        Hijau Tosca
+                    </h3>
+
+                    <p>
+
+                        Saat musim kemarau, air dapat terlihat
+                        jernih dengan warna hijau tosca yang
+                        menjadi salah satu keunikan Nglirip.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="attraction-card reveal">
+
+                <!-- FOTO HUTAN KRAWAK -->
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qRy2XoHbXBDh-GJOaePtNuFk7yhYe1gy6O-2_QWr8AK6ZFY5hmcLOQ4&s=10"
+                    alt="Hutan Krawak Tuban"
+                    loading="lazy"
+                >
+
+                <span class="card-number">
+                    02
+                </span>
+
+                <div class="attraction-content">
+
+                    <h3>
+                        Hutan<br>
+                        Krawak
+                    </h3>
+
+                    <p>
+
+                        Pepohonan rindang dan tebing batu alami
+                        menciptakan suasana sejuk dan tenang
+                        jauh dari hiruk-pikuk perkotaan.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="attraction-card reveal">
+
+                <!-- FOTO NGLIRIP DARI HASIL PENCARIAN YANG DIMINTA -->
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7pAuQ44UBlrmshE1d0n6AJmoWs2U8FZ2u7GEQ-1Yo6fMUDJoPN5MJqZ-n&s=10"
+                    alt="Air Terjun Nglirip"
+                    loading="lazy"
+                >
+
+                <span class="card-number">
+                    03
+                </span>
+
+                <div class="attraction-content">
+
+                    <h3>
+                        Cerita<br>
+                        Putri Nglirip
+                    </h3>
+
+                    <p>
+
+                        Kisah Putri Nglirip merupakan cerita rakyat
+                        yang berkembang di masyarakat dan menjadi
+                        bagian dari identitas lokal kawasan ini.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     AKTIVITAS
+========================================================= -->
+
+<section class="activities" id="aktivitas">
+
+    <div class="section-container">
+
+        <div class="section-label reveal">
+            03 — Experience
+        </div>
+
+        <h2 class="section-title reveal">
+            Nikmati dengan<br>
+            <em>cara kamu.</em>
+        </h2>
+
+        <div class="activities-grid">
+
+
+            <div class="activity reveal">
+
+                <!-- IKON KAMERA -->
+                <div class="activity-icon camera">
+                    📷
+                </div>
+
+                <h3>
+                    Photography
+                </h3>
+
+                <p>
+                    Abadikan air terjun, pepohonan,
+                    tebing, dan suasana alami Nglirip.
+                </p>
+
+            </div>
+
+
+            <div class="activity reveal">
+
+                <!-- IKON JALAN / NATURE WALK -->
+                <div class="activity-icon walk">
+                    🥾
+                </div>
+
+                <h3>
+                    Nature Walk
+                </h3>
+
+                <p>
+                    Menikmati suasana hijau dan
+                    udara sejuk di sekitar kawasan.
+                </p>
+
+            </div>
+
+
+            <div class="activity reveal">
+
+                <!-- IKON KOMPAS / EXPLORE -->
+                <div class="activity-icon explore">
+                    🧭
+                </div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <p>
+                    Menjelajahi area wisata sambil
+                    menikmati panorama alam.
+                </p>
+
+            </div>
+
+
+            <div class="activity reveal">
+
+                <!-- IKON CERITA -->
+                <div class="activity-icon story">
+                    📖
+                </div>
+
+                <h3>
+                    Local Story
+                </h3>
+
+                <p>
+                    Mengenal cerita dan legenda
+                    yang berkembang di masyarakat.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SEJARAH
+========================================================= -->
+
+<section class="history">
+
+    <div class="section-container history-grid">
+
+        <div class="history-image reveal">
+
+            <img
+                src="https://cdngnfi2.sgp1.cdn.digitaloceanspaces.com/gnfi/uploads/images/2021/03/1218222021-air-terjunnglirip-tuban-jawa-timur-by-jumowo.jpg"
+                alt="Air Terjun Nglirip"
+                loading="lazy"
+            >
+
+            <div class="history-stamp">
+
+                Local<br>
+                Heritage
+
+            </div>
+
+        </div>
+
+        <div class="history-copy reveal">
+
+            <div class="section-label">
+                04 — Jejak Sejarah
+            </div>
+
+            <h2 class="section-title">
+                Cerita yang<br>
+                <em>diteruskan.</em>
+            </h2>
+
+            <p class="body-text">
+
+                Nglirip tidak hanya dikenal karena panorama
+                air terjunnya. Di balik kawasan ini terdapat
+                cerita rakyat tentang Putri Nglirip yang
+                berkembang dari generasi ke generasi.
+
+            </p>
+
+            <div class="legend-box">
+
+                <small>
+                    Local Folklore
+                </small>
+
+                <p>
+
+                    Cerita tentang Putri Nglirip merupakan bagian
+                    dari legenda yang berkembang di masyarakat.
+                    Kisah tersebut menjadi salah satu cerita lokal
+                    yang membuat kawasan Nglirip memiliki nilai
+                    budaya selain keindahan alamnya.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VIDEO
+========================================================= -->
+
+<section class="video-section" id="video">
+
+    <div class="section-container video-layout">
+
+        <div class="video-text reveal">
+
+            <div class="section-label">
+                05 — Visual Journey
+            </div>
+
+            <h2 class="section-title">
+                Lihat Nglirip<br>
+                <em>bergerak.</em>
+            </h2>
+
+            <p class="body-text">
+
+                Saksikan dokumentasi perjalanan dan suasana
+                Air Terjun Nglirip melalui video.
+
+            </p>
+
+            <a
+                href="https://vt.tiktok.com/ZSqxWXHmN/"
+                target="_blank"
+                class="button button-primary"
+                style="margin-top:30px;"
+            >
+                Tonton di TikTok ↗
+            </a>
+
+        </div>
+
+        <a
+            href="https://vt.tiktok.com/ZSqxWXHmN/"
+            target="_blank"
+            class="video-card reveal"
+        >
+
+            <img
+                src="https://cdn1.katadata.co.id/media/images/thumb/2022/09/23/Air_Terjun_Nglirip-2022_09_23-12_25_26_7f1a9ae8f46c87ce381b0d0d2aaf8259_960x640_thumb.jpg"
+                alt="Dokumentasi Air Terjun Nglirip"
+                loading="lazy"
+            >
+
+            <div class="video-overlay">
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </div>
+
+            <div class="video-caption">
+
+                <span>
+                    Air Terjun Nglirip
+                </span>
+
+                <span>
+                    TikTok ↗
+                </span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     KULINER / UMKM
+========================================================= -->
+
+<section class="culinary" id="kuliner">
+
+    <div class="section-container">
+
+        <div class="culinary-heading reveal">
+
+            <div>
+
+                <div class="section-label">
+                    06 — Local Taste
+                </div>
+
+                <h2 class="section-title">
+                    Rasa lokal,<br>
+                    <em>cerita baru.</em>
+                </h2>
+
+            </div>
+
+            <p class="body-text">
+
+                Setelah menikmati alam Nglirip,
+                jangan lewatkan kuliner yang dekat
+                dengan cita rasa khas Nusantara.
+
+            </p>
+
+        </div>
+
+        <div class="food-grid">
+
+
+            <!-- PECEL -->
+
+            <article class="food-card reveal">
+
+                <img
+                    src="https://cdn1-production-images-kly.akamaized.net/IYLs6NV3oDH6QDaevQwx61PIAB0=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4473383/original/068276100_1687235818-shutterstock_796820512.jpg"
+                    alt="Nasi Pecel"
+                    loading="lazy"
+                >
+
+                <div class="food-info">
+
+                    <small>
+                        Kuliner Lokal
+                    </small>
+
+                    <h3>
+                        Pecel
+                    </h3>
+
+                    <!-- DIUBAH DARI LIHAT RESEP MENJADI LIHAT FOTO -->
+                    <a
+                        href="https://www.google.com/search?q=foto+nasi+pecel&tbm=isch"
+                        target="_blank"
+                    >
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- RUJAK ULEG -->
+
+            <article class="food-card reveal">
+
+                <img
+                    src="https://cdn.idntimes.com/content-images/community/2018/01/rujak-kolam-medan-775acc8c829b9f7c6741926a10431c06.jpg"
+                    alt="Rujak Uleg"
+                    loading="lazy"
+                >
+
+                <div class="food-info">
+
+                    <small>
+                        Cita Rasa Nusantara
+                    </small>
+
+                    <h3>
+                        Rujak Uleg
+                    </h3>
+
+                    <!-- DIUBAH MENJADI LIHAT FOTO -->
+                    <a
+                        href="https://www.google.com/search?q=foto+rujak+uleg&tbm=isch"
+                        target="_blank"
+                    >
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TAHU CAMPUR -->
+
+            <article class="food-card reveal">
+
+                <img
+                    src="https://www.dapurkobe.co.id/wp-content/uploads/tahu-campur.jpg"
+                    alt="Tahu Campur"
+                    loading="lazy"
+                >
+
+                <div class="food-info">
+
+                    <small>
+                        Jawa Timur
+                    </small>
+
+                    <h3>
+                        Tahu Campur
+                    </h3>
+
+                    <!-- DIUBAH MENJADI LIHAT FOTO -->
+                    <a
+                        href="https://www.google.com/search?q=foto+tahu+campur&tbm=isch"
+                        target="_blank"
+                    >
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+        <!-- TEKS TAMBAHAN DI BAWAH FOTO MAKANAN -->
+        <p class="culinary-note">
+            Di sekitar Air Terjun Nglirip, wisatawan juga dapat menemukan makanan dan produk lokal yang memiliki cita rasa khas serta dibuat oleh masyarakat sekitar. Produk tersebut dapat menjadi pilihan untuk dinikmati selama berwisata maupun dibawa pulang sebagai oleh-oleh. Dengan membeli produk lokal, wisatawan juga turut mendukung usaha dan perekonomian masyarakat sekitar.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INFORMASI
+========================================================= -->
+
+<section class="info" id="info">
+
+    <div class="section-container info-layout">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                07 — Visitor Guide
+            </div>
+
+            <h2 class="section-title">
+                Sebelum<br>
+                <em>berangkat.</em>
+            </h2>
+
+            <div class="info-list">
+
+                <div class="info-row">
+
+                    <strong>
+                        Lokasi
+                    </strong>
+
+                    <span>
+                        Kecamatan Singgahan,
+                        Kabupaten Tuban,
+                        Jawa Timur
+                    </span>
+
+                </div>
+
+                <div class="info-row">
+
+                    <strong>
+                        Suasana
+                    </strong>
+
+                    <span>
+                        Sejuk, hijau, dan alami
+                    </span>
+
+                </div>
+
+                <div class="info-row">
+
+                    <strong>
+                        Daya Tarik
+                    </strong>
+
+                    <span>
+                        Air terjun, hutan,
+                        dan cerita lokal
+                    </span>
+
+                </div>
+
+                <div class="info-row">
+
+                    <strong>
+                        Fasilitas
+                    </strong>
+
+                    <span>
+                        Area parkir, gazebo,
+                        toilet, tempat ibadah,
+                        warung, dan spot foto
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TAMBAHAN INFORMASI WAKTU BERANGKAT -->
+
+            <div class="visitor-note">
+
+                <small>
+                    Waktu & Persiapan
+                </small>
+
+                <p>
+                    Jika berangkat dari Tuban kota, sebaiknya mulai
+                    perjalanan pukul 06.00–07.00 WIB agar tiba pagi
+                    dan dapat menikmati udara sejuk, pemandangan
+                    yang cerah, serta angin sepoi-sepoi.
+                </p>
+
+                <p>
+                    Waktu 07.00–10.00 WIB cocok untuk menikmati
+                    suasana pagi, sedangkan 15.00–16.30 WIB cocok
+                    untuk menikmati cahaya matahari yang lebih lembut.
+                </p>
+
+                <p>
+                    Tempat wisata umumnya buka sekitar 06.00/07.00–16.30/17.00 WIB.
+                    Jangan lupa membawa payung/jas hujan, tikar atau
+                    karpet, air minum, sunscreen, dan alas kaki yang nyaman.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BACKGROUND FOTO + BLUR -->
+
+        <div class="tip-box reveal">
+
+            <div>
+
+                <small>
+                    Travel Note
+                </small>
+
+                <h3>
+                    Bawa pulang<br>
+                    bukan hanya foto.
+                </h3>
+
+                <p>
+
+                    Nikmati alam dengan tetap menjaga kebersihan,
+                    menghormati lingkungan, dan menghargai cerita
+                    serta budaya masyarakat sekitar. Jadilah wisatawan
+                    yang bijak dengan tidak merusak alam, membuang
+                    sampah pada tempatnya, serta ikut menjaga keindahan
+                    dan kelestarian Air Terjun Nglirip agar tetap nyaman
+                    dinikmati oleh semua orang.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <a
+                    href="#lokasi"
+                    class="button button-primary"
+                >
+                    Lihat lokasi ↘
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section-container">
+
+        <div class="gallery-head reveal">
+
+            <div>
+
+                <div class="section-label">
+                    08 — Gallery
+                </div>
+
+                <h2 class="section-title">
+                    Potongan<br>
+                    <em>Nglirip.</em>
+                </h2>
+
+            </div>
+
+            <p class="body-text">
+
+                Beberapa sudut Nglirip yang menggambarkan
+                perpaduan air, tebing, pepohonan,
+                dan suasana alam Tuban.
+
+            </p>
+
+        </div>
+
+
+        <!-- FOTO-FOTO DIRAPIKAN -->
+
+        <div class="gallery-grid">
+
+            <a
+                href="https://www.bing.com/images/search?view=detailV2&ccid=LOZgokP5"
+                target="_blank"
+                class="gallery-item reveal"
+            >
+
+                <img
+                    src="https://ulasan.co/wp-content/uploads/2023/10/Wisata-Air-Terjun-Indonesia_Air-Terjun-Nglirip-Jawa-Timur-Traveloka.webp"
+                    alt="Air Terjun Nglirip"
+                    loading="lazy"
+                >
+
+            </a>
+
+
+            <a
+                href="https://www.bing.com/images/search?view=detailV2&ccid=7YwQ9v0r"
+                target="_blank"
+                class="gallery-item reveal"
+            >
+
+                <img
+                    src="https://wisatamilenial.com/wp-content/uploads/2021/06/Air-Terjun-Nglirip-di-Lihat-Dari-Atas-Image-From-%40soqib_anwar25.jpg"
+                    alt="Air Terjun Nglirip dari atas"
+                    loading="lazy"
+                >
+
+            </a>
+
+
+            <a
+                href="https://www.bing.com/images/search?view=detailV2&ccid=9kVQn4Jt"
+                target="_blank"
+                class="gallery-item reveal"
+            >
+
+                <img
+                    src="https://javatempletrip.com/wp-content/uploads/2023/09/Air-Terjun-Nglirip.jpg"
+                    alt="Air Terjun Nglirip"
+                    loading="lazy"
+                >
+
+            </a>
+
+
+            <a
+                href="https://www.bing.com/images/search?view=detailV2&ccid=2JwP8h9a"
+                target="_blank"
+                class="gallery-item reveal"
+            >
+
+                <img
+                    src="https://static.vecteezy.com/system/resources/previews/015/225/382/large_2x/beautiful-shot-of-a-waterfall-indonesia-the-name-air-terjun-nglirip-tuban-jawa-timur-photo.jpg"
+                    alt="Air Terjun Nglirip Tuban"
+                    loading="lazy"
+                >
+
+            </a>
+
+
+            <a
+                href="https://www.bing.com/images/search?view=detailV2&ccid=Qf3b2K6n"
+                target="_blank"
+                class="gallery-item reveal"
+            >
+
+                <img
+                    src="https://cdn1.katadata.co.id/media/images/thumb/2022/09/23/Air_Terjun_Nglirip-2022_09_23-12_25_26_7f1a9ae8f46c87ce381b0d0d2aaf8259_960x640_thumb.jpg"
+                    alt="Air Terjun Nglirip"
+                    loading="lazy"
+                >
+
+            </a>
+
+        </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOKASI
+========================================================= -->
+
+<section class="location" id="lokasi">
+
+    <div class="section-container location-grid">
+
+        <div class="location-copy reveal">
+
+            <div class="section-label">
+                09 — Location
+            </div>
+
+            <h2 class="section-title">
+                Temukan<br>
+                <em>jejaknya.</em>
+            </h2>
+
+            <p class="body-text">
+
+                Air Terjun Nglirip berada di Kecamatan
+                Singgahan, Kabupaten Tuban, Jawa Timur.
+
+            </p>
+
+            <div class="location-address">
+
+                <strong>
+                    Air Terjun Nglirip
+                </strong>
+
+                <br>
+
+                Singgahan, Kabupaten Tuban,
+                Jawa Timur, Indonesia
+
+            </div>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Air+Terjun+Nglirip+Tuban"
+                target="_blank"
+                class="button"
+                style="
+                    background:#3F695C;
+                    color:white;
+                    margin-top:30px;
+                    width:max-content;
+                "
+            >
+                Buka Google Maps ↗
+            </a>
+
+        </div>
+
+
+        <div class="map reveal">
+
+            <iframe
+                src="https://www.google.com/maps?q=Air+Terjun+Nglirip+Tuban&output=embed"
+                loading="lazy"
+                allowfullscreen=""
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div class="cta-content reveal">
+
+        <div class="cta-small">
+        </div>
+
+        <h2>
+            Satu aliran air.<br>
+            Sejuta cerita.
+        </h2>
+
+        <p>
+
+            Nglirip mengajak kita untuk menikmati alam,
+            mengenal cerita lokal, dan menjaga warisan
+            agar tetap mengalir ke generasi berikutnya.
+
+        </p>
+
+        <a
+            href="#home"
+            class="button"
+        >
+            Kembali ke atas ↑
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOCIAL MEDIA FLOATING POP-UP
+========================================================= -->
+
+<div class="social-float">
+
+    <div class="social-float-item">
+
+        <span class="social-float-label">
+            WhatsApp
+        </span>
+
+        <a
+            href="https://wa.me/6282143148939"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-float-button social-float-whatsapp"
+            aria-label="WhatsApp"
+        >
+            <!-- LOGO WHATSAPP -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.52 3.48A11.84 11.84 0 0 0 12.07 0C5.55 0 .25 5.3.25 11.82c0 2.08.54 4.11 1.56 5.9L.15 24l6.43-1.64a11.78 11.78 0 0 0 5.49 1.35h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.16-1.23-6.13-3.38-8.41ZM12.08 21.7h-.01a9.82 9.82 0 0 1-5-1.37l-.36-.21-3.82.97 1.02-3.72-.23-.38a9.83 9.83 0 1 1 8.4 4.71Zm5.39-7.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.2-.34.22-.63.07-.29-.15-1.21-.45-2.31-1.44-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.2 0-.52.07-.79.37-.27.29-1.03 1-1.03 2.44s1.05 2.83 1.2 3.02c.15.2 2.07 3.16 5.01 4.43.7.3 1.24.48 1.67.61.7.22 1.34.19 1.85.11.56-.08 1.7-.7 1.94-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34Z"/>
+            </svg>
+        </a>
+
+    </div>
+
+
+    <div class="social-float-item">
+
+        <span class="social-float-label">
+            Instagram
+        </span>
+
+        <a
+            href="https://www.instagram.com/airterjunputringlirip?stkn=MTI5N2NlanJ0NGk3NQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-float-button social-float-instagram"
+            aria-label="Instagram"
+        >
+            <!-- LOGO INSTAGRAM -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+            </svg>
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>
+                Nglirip.
+            </h3>
+
+            <p>
+
+                Nature, heritage, and local stories
+                from Tuban, East Java.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Explore
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#story">
+                        Tentang Nglirip
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#pesona">
+                        Daya Tarik
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#aktivitas">
+                        Aktivitas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#gallery">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#lokasi">
+                        Location
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Taste
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="https://www.google.com/search?q=foto+nasi+pecel&tbm=isch"
+                        target="_blank"
+                    >
+                        Pecel ↗
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.google.com/search?q=foto+rujak+uleg&tbm=isch"
+                        target="_blank"
+                    >
+                        Rujak Uleg ↗
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.google.com/search?q=foto+tahu+campur&tbm=isch"
+                        target="_blank"
+                    >
+                        Tahu Campur ↗
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Video
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="https://vt.tiktok.com/ZSqxWXHmN/"
+                        target="_blank"
+                    >
+                        TikTok ↗
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Nglirip Editorial Project
+        </span>
+
+        <span>
+            Made with nature & stories.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+const observer =
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+revealElements.forEach((element) => {
+
+    observer.observe(element);
+
+});
+
+
+/* =========================================================
+   NAVBAR SHADOW
+========================================================= */
+
+const navbar =
+    document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+
+        navbar.style.boxShadow =
+            "0 15px 45px rgba(38,63,54,.18)";
+
+    } else {
+
+        navbar.style.boxShadow =
+            "0 15px 50px rgba(38,63,54,.10)";
+
+    }
+
+});
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+document.querySelectorAll("img").forEach((img) => {
+
+    img.addEventListener("error", () => {
+
+        img.style.background =
+            "linear-gradient(135deg,#315A50,#6FA9A0)";
+
+        img.style.objectFit = "cover";
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
